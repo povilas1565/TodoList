@@ -1,0 +1,112 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 32px 50px;
+    gap: 10px;
+
+    position: relative;
+
+    background-color: #FFF7E3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 10em 0px 0px;
+}
+
+html{
+    background-color: #808080;
+}
+
+.header{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 900%;
+    line-height: 33px;
+
+    color: #000000;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    z-index: 0;
+}
+
+
+.dottedLine{
+    border: 0.3em dashed #000000;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.angle{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 0 10em 0 0;
+    right: 0px;
+    top: 0px;
+    background: #FFF7E3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    flex: none;
+}
+
+.custom-checkbox{
+    width: 50em;
+}
+
+.custom-checkbox > input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+}
+
+.custom-checkbox > span {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    font-size: 5em;
+}
+
+.custom-checkbox > span::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 0.1em solid #000000;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+
+}
+
+.custom-checkbox > input:not(:disabled):not(:checked) + span:hover::before {
+    border-color: #000000;
+}
+
+.custom-checkbox > input:not(:disabled):active + span::before {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.custom-checkbox > input:focus:not(:checked) + span::before {
+    border-color: #000000;
+}
+
+.custom-checkbox > input:checked + span::before {
+    background-image: url("https://cdn.onlinewebfonts.com/svg/img_150005.png");
+}
+
+.custom-checkbox > input:disabled + span::before {
+    background-color: #000000;
+}
+
+.listItem{
+    margin-bottom: 20px;
+}
